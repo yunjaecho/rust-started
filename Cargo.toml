@@ -1,0 +1,6 @@
+[package]
+name = "rust-started"
+version = "0.1.0"
+authors = ["comp1 <chotom73@gmail.com>"]
+
+[dependencies]
