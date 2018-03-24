@@ -1,59 +1,22 @@
-struct Robot {
-
-}
-
-impl Robot {
-    fn greet(&self) {
-        println!("Hello, Developer!")
-    }
-}
-/**
-* module
-* items, functions, structs, impls are defined here
-**/
-mod robot1 {
-    /**
-     * private function
-    **/
-    fn say_hello() {
-        println!("Hello")
-    }
-
-    /**
-     * public function
-    **/
-    pub fn say_hi() {
-        println!("Hi")
-    }
-}
-
-mod macros;
-
-
 fn main() {
-    println!("Hello, robot!");
-    let mut bot = Robot {};
-    bot.greet();
+    let mut x = 17;
+    println!("x = {}", x);
+    x = my_func();
+    println!("x = {}", x);
 
-    let mut a = 5;
-    let mut b = 1;
-    while  a == 5 {
-        b += 1;
-        if b == 5 {
-            a += 1;
-        }
-    }
+    x = calc(100, 100);
+    println!("x = {}", x);
+}
 
-    let x = 0;
-    for x in 0..10 {
-        println!("{}", x);
-    }
 
-    //robot1::say_hello();
-    robot1::say_hi();
-    // function alias
-    use robot1::say_hi as hi;
-    hi();
+fn my_func() -> i32 {
+    let x= 9;
+    // return is not semicolon
+    x
+}
 
-    welcome!();
+fn calc(x:i32, y:i32) -> i32{
+    let result = x * y;
+    // return is not semicolon
+    result;
 }
