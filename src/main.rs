@@ -1,22 +1,8 @@
-fn main() {
-    let mut x = 17;
-    println!("x = {}", x);
-    x = my_func();
-    println!("x = {}", x);
 
-    x = calc(100, 100);
-    println!("x = {}", x);
-}
+mod smaple_module;
+use smaple_module::SampleImpl;
 
-
-fn my_func() -> i32 {
-    let x= 9;
-    // return is not semicolon
-    x
-}
-
-fn calc(x:i32, y:i32) -> i32{
-    let result = x * y;
-    // return is not semicolon
-    result;
+pub fn main() {
+    let myobject = SampleImpl::new("Matt".to_string());
+    myobject.hello_world();
 }
